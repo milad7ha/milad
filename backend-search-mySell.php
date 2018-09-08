@@ -45,7 +45,11 @@ if(isset($_REQUEST['type'])){
 
                     <div class=\"case my-4 \" id=\"b".$row['id'] . "\">
 
-                                            
+                       <div class=\"row rent" .$row['id'].  " rent-fade\">
+                                                <div class=\"col-6 col-sm-12\">
+                                                    کد : ". $row["id"]. "
+                                                </div>
+                                            </div>                     
                     <div class=\"row buyf". $row["id"] . "\">
                                                 <div class=\"col-6 col-md-3 col-lg-3 col-sm-12  case-info\" >نوع :" . $row["type"] . 
                                                 "</div>
@@ -73,7 +77,8 @@ if(isset($_REQUEST['type'])){
                                                 <div class=\"col-6 col-md-3 col-lg-3 col-sm-12  case-info\" >شماره تماس :" .  $row["phone"] . "</div>                                                
                                             </div>
                                             <div class=\"row buyf" . $row['id'] . "\" style=\"text-align: right;\">
-                                                <div class=\"col-12 col-md-12 col-lg-12 col-sm-12 case-info\">آدرس :" . $row["address"] . "</div>
+                                                <div class=\"col-9 col-md-9 col-lg-9 col-sm-12 case-info\">آدرس :" . $row["address"] . "</div>
+                                                <div class=\"col-3 col-md-3 col-lg-3 col-sm-12 case-info\">مالک  :" . $row["owner"] . "</div>
                                                 
                                             </div>
                                             <div class=\"row buyf". $row['id']. "\" style=\"text-align: right;\">
