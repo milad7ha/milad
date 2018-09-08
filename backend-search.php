@@ -45,12 +45,21 @@ if(isset($_REQUEST['type'])){
                      echo 
                    "<div class=\"row mb-2\" id=\"rent".$row['id'] . "\" style=\"direction: ltr;\">
                                                 <button type=\"button\" class=\"btn  btn-danger \" id=".$row['id']. " onclick=\"delete_rent_case_s(this.id)\"> <span uk-icon=\"icon: trash; ratio: 0.9\"></span></button>
-                                                <button type=\"button\" class=\"btn btn-info rent_edit_enable\" style=\"margin-left: 10px\" id=".$row['id']. " onclick=\"edit_rent_case_s(this.id)\"> <span uk-icon=\"icon: pencil; ratio: 0.9\"></span></button>
+                                                <button type=\"button\" class=\"btn btn-info rent_edit_enable mx-2\" style=\"margin-left: 10px\" id=".$row['id']. " onclick=\"edit_rent_case_s(this.id)\"> <span uk-icon=\"icon: pencil; ratio: 0.9\"></span></button>";
+                                                if($row['shared'] == "on"){echo"
+                                                    <button type=\"button\" class=\"btn  btn-success share-sitem\" id=" . $row['id']. " > <span uk-icon=\"icon: social; ratio: 0.9\"></span></button>";
+                                                }else{
+                                                   echo " <button type=\"button\" class=\"btn  btn-success share-sitem\" id=" . $row['id']. " > عدم اشتراک</button>";
+                                                }echo"
                                                         
                                             </div>
                     <div class=\"case my-4 \" id=\"rent".$row['id'] . "\">
 
-                                            
+                                            <div class=\"row rent" .$row['id'].  " rent-fade\">
+                                                <div class=\"col-6 col-sm-12\">
+                                                    کد : ". $row["id"]. "
+                                                </div>
+                                            </div>
                     <div class=\"row rent". $row["id"] . "\">
                                                 <div class=\"col-6 col-md-3 col-lg-3 col-sm-12  case-info\" >نوع :" . $row["type"] . 
                                                 "</div>
@@ -80,7 +89,8 @@ if(isset($_REQUEST['type'])){
                                             </div>
                                             <div class=\"row rent" . $row['id'] . "\" style=\"text-align: right;\">
                                                 <div class=\"col-6 col-md-6 col-lg-6 col-sm-12 case-info\">آدرس :" . $row["address"] . "</div>
-                                                <div class=\"col-6 col-md-6 col-lg-6 col-sm-12 case-info\">شماره تماس :" . $row["phone"] . "</div>
+                                                <div class=\"col-3 col-md-3 col-lg-3 col-sm-12 case-info\">شماره تماس :" . $row["phone"] . "</div>
+                                                 <div class=\"col-3 col-md-3 col-lg-3 col-sm-12 case-info\"> مالک :" . $row["owner"] . "</div>
                                             </div>
                                             <div class=\"row rent". $row['id']. "\" style=\"text-align: right;\">
                                                 <div class=\"col-12\">توضیحات: " . $row["discription"] . "</div>
