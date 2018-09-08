@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form class="form-group" id="myForm" action="d" method="post" style="display : none">
+	<input >
+    <input >
+</form>
+
+<p>Click the button below to disable the button above.</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="function2()">enable</button>
+
+<script>
+
+function function2(){
+document.getElementById ("myForm").style.display ="" ;}
+function myFunction() {
+    document.getElementById ("myForm").style.display ="none";
+}
+</script>
+
+
+<div class="case my-4" id="rent<?php echo $rental_result['id']; ?>">
+		    								<div class="row mb-2" style="direction: ltr;">
+		    									<button type="button" class="btn  btn-danger delete_rent_case" id=<?php echo $rental_result['id']; ?> > <span uk-icon="icon: trash; ratio: 0.9"></span></button>
+		    									<button type="button" class="btn  btn-info " style="margin-left: 10px"> <span uk-icon="icon: pencil; ratio: 0.9"></span></button>
+		    									  		
+		    								</div>
+			    							<div class="row">
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info " >نوع :<?php echo $rental_result["type"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >متراژ : <?php echo $rental_result["area"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >رهن <?php echo $rental_result["mortgage"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >اجاره : <?php echo $rental_result["rent"] ?></div>
+			    							</div>
+			    							<div class="row">
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >تعداد طبقات : <?php echo $rental_result["floors"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >طبقه : <?php echo $rental_result["floor"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >تعداد واحد در طبقه :<?php echo $rental_result["upf"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >واحد : <?php echo $rental_result["unit"] ?></div>
+			    								
+
+			    							</div>
+			    							<div class="row">
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >گرمایش-سرمایش : <?php echo $rental_result["cold_heat"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >پارکینگ : <?php echo $rental_result["parking"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >آسانسور: <?php echo $rental_result["elevator"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >تراس : <?php echo $rental_result["terrace"] ?></div>
+			    							</div>
+			    							<div class="row">
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >نما، پوشش: <?php echo $rental_result["facades"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >کابینت : <?php echo $rental_result["kitchen"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >سرویس: <?php echo $rental_result["service"] ?></div>
+			    								<div class="col-6 col-md-3 col-lg-3 col-sm-12  case-info" >سن : <?php echo $rental_result["hold"] ?></div>
+			    								
+			    							</div>
+			    							<div class="row" style="text-align: right;">
+			    								<div class="col-6 col-md-6 col-lg-6 col-sm-12 case-info">آدرس :<?php echo $rental_result["address"] ?></div>
+			    								<div class="col-6 col-md-6 col-lg-6 col-sm-12 case-info">شماره تماس :<?php echo $rental_result["phone"] ?></div>
+			    							</div>
+			    							<div class="row" style="text-align: right;">
+			    								<div class="col-12">توضیحات: <?php echo $rental_result["discription"] ?></div>
+			    							</div>
+		    							</div>
+
+</body>
+</html>
